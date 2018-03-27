@@ -6,6 +6,10 @@
     }
 @endpush
 
+@push('title')
+    Login
+@endpush
+
 @section('content')
     <section>
         <div class="container">

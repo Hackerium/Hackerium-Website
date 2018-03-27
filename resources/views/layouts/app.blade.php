@@ -10,16 +10,8 @@
 
         <title>{{ config('app.name', 'Laravel') }} | @stack('title')</title>
 
-        <!-- Prefetching -->
-        <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/materialize-css@0.100.2/dist/css/materialize.min.css">
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/combine/npm/jquery@3.2.1,npm/materialize-css@0.100.2"></script>
-
-        <link rel="prefetch" href="https://cdn.jsdelivr.net/npm/materialize-css@0.100.2/dist/css/materialize.min.css">
-        <link rel="prefetch" href="https://cdn.jsdelivr.net/combine/npm/jquery@3.2.1,npm/materialize-css@0.100.2">
+        <link rel="stylesheet" href="{{ mix('/css/app.css') }}">
+        <script src="{{ mix('js/app.js') }}"></script>
 
         <style>
             @stack('styles')
@@ -47,5 +39,14 @@
             @yield('content')
         </main>
         @include('layouts.footer')
+        <script>
+            Mousetrap.bind('g r', function () {
+                location.href = "{{ route('register') }}";
+            });
+
+            Mousetrap.bind('g l', function () {
+                location.href = "{{ route('login') }}";
+            });
+        </script>
     </body>
 </html>
