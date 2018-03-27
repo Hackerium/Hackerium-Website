@@ -1,5 +1,5 @@
 # Hackerium
-> ***Learn coding, the right way***
+> ***Computer education, the right way***
 
 This repository contains the whole code that is responsible for Hackerium's website working *top-notch*. You are free to clone it and make changes. The whole website is built using Laravel PHP framework.
 

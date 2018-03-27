@@ -12,6 +12,8 @@ try {
     window.Mousetrap = require('mousetrap');
 
     require('materialize-css');
+    require('fullpage.js');
+    require('wowjs');
 } catch (e) {}
 
 /**

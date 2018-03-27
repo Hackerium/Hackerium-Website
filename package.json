@@ -10,15 +10,17 @@
         "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
     },
     "devDependencies": {
+        "animate.css": "^3.6.1",
         "axios": "^0.18",
         "cross-env": "^5.1",
+        "fullpage.js": "^2.9.6",
         "jquery": "^3.2",
         "laravel-mix": "^2.0",
         "lodash": "^4.17.4",
-        "materialize-css": "^0.100.2"
+        "materialize-css": "^0.100.2",
+        "mousetrap": "^1.6.1"
     },
     "dependencies": {
-        "animate.css": "^3.6.1",
-        "mousetrap": "^1.6.1"
+        "wowjs": "^1.1.3"
     }
 }
