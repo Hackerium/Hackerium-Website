@@ -7,3 +7,42 @@
 
 // Animate CSS
 @import '~animate.css';
+
+.text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fullPage {
+  height: 100vh;
+}
+
+.section-1 {
+  background: url("https://images.unsplash.com/photo-1477244075012-5cc28286e465?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=76ae2034864198c0b4daf6117ba25e7") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+section {
+  padding-top: 45px;
+}
+
+.primary-color {
+  background-color: #F44336 !important;
+}
+
+.primary-accent {
+  background-color: #FFC107 !important;
+}
+
+.primary-color-deep {
+  background-color: #D32F2F !important;
+}
+
+.primary-text {
+  color: #212121 !important;
+}
