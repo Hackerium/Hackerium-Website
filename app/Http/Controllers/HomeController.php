@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\Repositories\HackeriumRepo;
 
 class HomeController extends Controller
 {
@@ -23,6 +23,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $closedHackeria = (new HackeriumRepo)->getClosedHackeria(5);
+        $openHackeria = (new HackeriumRepo)->getOpenHackeria(5);
+
+        return view('home', [
+            'closedhackeria' => $closedHackeria,
+            'openhackeria' => $openHackeria
+        ]);
     }
 }

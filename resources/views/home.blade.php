@@ -39,5 +39,8 @@
                 </div>
             </div>
         </div>
+        @foreach($closedhackeria as $hackerium)
+            <p>{{ $hackerium->title }}</p>
+        @endforeach
     </section>
 @endsection

@@ -12,8 +12,8 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $keypoint
  * @property string $location
  * @property string $description
- * @property string|null $starts_by
- * @property string|null $ends_by
+ * @property \Carbon\Carbon|null $starts_by
+ * @property \Carbon\Carbon|null $ends_by
  * @property \Carbon\Carbon|null $created_at
  * @property \Carbon\Carbon|null $updated_at
  * @method static \Illuminate\Database\Eloquent\Builder|\App\Hackerium whereCreatedAt($value)
