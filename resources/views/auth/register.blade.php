@@ -11,11 +11,21 @@
 @endpush
 
 @section('content')
+    <div class="card indigo" style="margin: 0">
+        <div class="container">
+            <div class="card-content">
+                <h4 class="grey-text text-lighten-4">Register now</h4>
+                <h5 class="grey-text text-lighten-2"
+                    style="font-weight: 300; font-size: 20px;">
+                    Hey ya new folk, let us know bout' you!
+                </h5>
+            </div>
+        </div>
+    </div>
     <section>
         <div class="container">
             <div class="card">
                 <div class="card-content">
-                    <span class="card-title">{{ __('Register') }}</span>
                     <form action="{{ route('register') }}" method="post" id="register-form">
                         @csrf
 

@@ -11,11 +11,21 @@
 @endpush
 
 @section('content')
+    <div class="card indigo" style="margin: 0">
+        <div class="container">
+            <div class="card-content">
+                <h4 class="grey-text text-lighten-4">Login now</h4>
+                <h5 class="grey-text text-lighten-2"
+                    style="font-weight: 300; font-size: 20px;">
+                    Welcome back, let us know who you are!
+                </h5>
+            </div>
+        </div>
+    </div>
     <section>
         <div class="container">
             <div class="card">
                 <div class="card-content">
-                    <span class="card-title">{{ __('Login') }}</span>
                     <form action="{{ route('login') }}" method="post" id="login-form">
                         @csrf
 

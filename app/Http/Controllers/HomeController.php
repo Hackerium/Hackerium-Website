@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Participant;
 use App\Repositories\HackeriumRepo;
+use Carbon\Carbon;
 
 class HomeController extends Controller
 {
@@ -23,12 +25,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $closedHackeria = (new HackeriumRepo)->getClosedHackeria(5);
-        $openHackeria = (new HackeriumRepo)->getOpenHackeria(5);
-
-        return view('home', [
-            'closedhackeria' => $closedHackeria,
-            'openhackeria' => $openHackeria
-        ]);
+        return view('home');
     }
 }

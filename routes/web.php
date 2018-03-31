@@ -13,7 +13,7 @@
 
 Route::view('/', 'welcome');
 
-Route::get('/hackeria/{hackeria}', 'HackeriumController@showPost');
+Route::resource('hackerium', 'HackeriumController');
 
 Auth::routes();
 
