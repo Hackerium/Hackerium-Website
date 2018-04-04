@@ -23,16 +23,37 @@
     </div>
 
     <section>
-        <div class="col s12 m8 offset-m2 l6 offset-l3">
-            <div class="card-panel grey lighten-5 z-depth-1">
-                <div class="row valign-wrapper">
-                    <div class="col s2">
-                        <img src="images/yuna.jpg" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+        <div class="container">
+            <div class="row">
+                <div class="col s12 m8 l8">
+                    <div class="card">
+                        <div class="card-content">
+                            <span class="card-title">Something here</span>
+                        </div>
                     </div>
-                    <div class="col s10">
-                        <span class="black-text">
-                            This is a square image. Add the "circle" class to it to make it appear circular.
-                        </span>
+                </div>
+                <div class="col s12 m4 l4">
+                    <div class="card">
+                        <div class="card-content">
+                            <img src="https://lorempixel.com/g/700/700/" class="circle responsive-img">
+                            <div class="center-align">
+                                <br />
+                                <span class="card-title">{{ auth()->user()->name }}</span>
+                                <div class="chip">
+                                    <i class="close material-icons">local_post_office</i> {{ auth()->user()->email }}
+                                </div>
+                                <div class="chip">
+                                    <i class="close material-icons">person</i>
+                                    @if(auth()->user()->type === 0)
+                                        Normal User
+                                    @else
+                                        Admin
+                                    @endif
+                                </div>
+                            </div>
+                            <h5>About Me</h5>
+                            <p>{{ auth()->user()->profile->bio }}</p>
+                        </div>
                     </div>
                 </div>
             </div>
