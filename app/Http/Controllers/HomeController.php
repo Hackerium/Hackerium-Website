@@ -2,9 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Participant;
-use App\Repositories\HackeriumRepo;
-use Carbon\Carbon;
+use App\Hackerium;
 
 class HomeController extends Controller
 {
@@ -25,6 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $latestHackeria = Hackerium::latest()->take(2)->get();
+        return view('home', compact('latestHackeria'));
     }
 }

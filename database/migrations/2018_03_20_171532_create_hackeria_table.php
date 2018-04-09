@@ -20,7 +20,8 @@ class CreateHackeriaTable extends Migration
             $table->string('location');
             $table->string('description');
             $table->timestamp('starts_by')->nullable();
-            $table->timestamp('ends_by')->nullable();
+            $table->timestamp('ends_by')
+                ->nullable();
             $table->timestamps();
         });
     }

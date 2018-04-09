@@ -24,12 +24,47 @@
 
     <section>
         <div class="container">
+            @if(auth()->user()->type === 1)
+                <div class="card">
+                    <div class="card-content">
+                        <span class="card-title center-align">Admin, here you go</span>
+                        <br />
+                        <div class="center-align">
+                            <a href="{{ url('/') }}" class="waves-effect waves-dark btn green">Create Hackeria</a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="{{ url('/') }}" class="waves-effect waves-dark btn indigo">Manage Users</a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <a href="{{ url('/') }}" class="waves-effect waves-dark btn purple">View logs</a>
+                        </div>
+                    </div>
+                </div>
+            @endif
             <div class="row">
                 <div class="col s12 m8 l8">
-                    <div class="card">
-                        <div class="card-content">
-                            <span class="card-title">Something here</span>
-                        </div>
+                    <h4 style="font-weight: 300" class="center-align">Latest Hackeria</h4>
+                    <div class="row">
+                        @foreach($latestHackeria as $hackeria)
+                            <div class="col s12 m6 l6">
+                                <div class="card">
+                                    <div class="card-image">
+                                        <img src="https://lorempixel.com/g/500/500/" alt="{{ $hackeria->title }}">
+                                    </div>
+                                    <div class="card-content">
+                                        <span class="card-title">
+                                            {{ $hackeria->title }}
+                                        </span>
+                                        {{ $hackeria->keypoint }}
+                                        <br /><br />
+                                        <hr>
+                                        <br>
+                                        <i class="material-icons">location_on</i> {{ $hackeria->location }}
+                                    </div>
+                                    <div class="card-action">
+                                        <a href="{{ url('/') }}">Learn More</a>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
                     </div>
                 </div>
                 <div class="col s12 m4 l4">
